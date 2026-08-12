@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # College ERP System
 
 A full-stack College ERP built with **React (Vite + MUI)**, **Node.js / Express**, **PostgreSQL**, and **Prisma ORM**.
@@ -242,3 +243,6 @@ Accounts, and Settings already have working backend CRUD APIs, Prisma models, an
 
 This project was generated as a starter/reference implementation. Use and modify freely for your
 own institution or coursework.
+=======
+# college-erp
+>>>>>>> 9925434a6b7debc17b3b8cc40e30e0c4205c681c
