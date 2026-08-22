@@ -44,6 +44,11 @@ export const timetableApi = {
   create: (payload) => api.post("/timetable", payload),
   addSlot: (id, payload) => api.post(`/timetable/${id}/slots`, payload),
   getFacultyTimetable: (facultyId) => api.get(`/timetable/faculty/${facultyId}`),
+  // 👉 यह नया uploadExcel फंक्शन यहां जोड़ दिया गया है:
+  uploadExcel: (formData) =>
+    api.post("/timetable/upload", formData, {
+      headers: { "Content-Type": "multipart/form-data" },
+    }),
 };
 
 export const leaveApi = {
@@ -65,7 +70,7 @@ export const accountApi = {
   getExpenses: (params) => api.get("/accounts/expenses", { params }),
   createExpense: (payload) => api.post("/accounts/expenses", payload),
   getIncomes: (params) => api.get("/accounts/incomes", { params }),
-  createIncome: (payload) => api.post("/accounts/incomes", payload),
+  createIncome: (payload) => api.post("/accounts/incomes", { params }),
   getSummary: () => api.get("/accounts/summary"),
 };
 
